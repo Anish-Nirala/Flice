@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% block title %}
+Flice - Home
+{% endblock %}
+{% block body %}
+<section class="home" id="home">
+    <div class="home-content">
+        <h3>Flight Price Prediction Model</h3>
+        <p>Helps You To Choose Cheap And Best Flight</p>
+    </div>
+</section>
+<section class="about" id="about">
+    <h1 class="about-heading">
+        <span>A</span>
+        <span>B</span>
+        <span>O</span>
+        <span>U</span>
+        <span>T</span>
+        <span class="space"></span>
+        <span>U</span>
+        <span>S</span>
+    </h1>
+    <div class="row">
+        <div class="about-image">
+            <img src="../static/images/flice-logo.jpg" alt="">
+        </div>
+        <div class="about-content">
+            <h2>FLICE</h2>
+            <p>This Model Will Helps You To Get Estimate Of The Flight Cost Of Travelling. So Do Check This, Before
+                Booking Flight Ticket.
+            </p>
+        </div>
+    </div>
+</section>
+<section class="service" id="service">
+    <h1 class="service-heading">
+        <span>O</span>
+        <span>U</span>
+        <span>R</span>
+        <span class="space"></span>
+        <span>S</span>
+        <span>E</span>
+        <span>R</span>
+        <span>V</span>
+        <span>I</span>
+        <span>C</span>
+        <span>E</span>
+        <span>S</span>
+    </h1>
+    <div class="card-container">
+        <div class="card">
+            <img src="../static/images/flice-service.jpg" alt="Image">
+            <div class="content">
+                <h3 class="title">Predict</h3>
+                <p>Estimation about the flight price of different airlines
+                </p>
+                <a href="/predict"><button class="btn" id="btn">Check Out</button></a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

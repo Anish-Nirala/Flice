@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}
+Flice - Price
+{% endblock %}
+{% block body %}
+<section class="result" id="result">
+    <div class="result-container list-group list-group-flush">
+        <div class="list-group-item h1">The Estimated Flight Price is</div>
+        <div class="list-group-item h1">₹ {{price}}</div>
+    </div>
+    <a href="/"><button class="home-btn" id="home-btn">Home</button></a>
+</section>
+{% endblock %}

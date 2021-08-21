@@ -1,0 +1,588 @@
+@import url('https://fonts.googleapis.com/css2?family=Thasadith:wght@700&display=swap');
+:root {
+  --primary-color: rgb(12, 174, 238);
+  --secondary-color: linear-gradient(to bottom, #89f7fe, #66a6ff);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Thasadith', sans-serif;
+}
+
+html {
+  overflow-x: hidden;
+  scroll-padding-top: 6rem;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #a7ccfc;
+  filter: blur(0.2);
+}
+
+/* Header Section Begins Here */
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #111;
+  padding: 0 10%;
+  height: 5rem;
+  z-index: 2;
+}
+
+.header.active {
+  height: 22rem;
+}
+
+.header .logo {
+  font-size: 2.5rem;
+  color: #fff;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-weight: bolder;
+}
+
+.header .logo span {
+  color: var(--primary-color);
+}
+
+.header .logo {
+  transition: transform 0.2s linear;
+}
+
+.header .logo:hover {
+  transform: scale(1.1);
+}
+
+.header .navbar {
+  display: block;
+}
+
+.header .navbar a {
+  color: #fff;
+  font-size: 1.5rem;
+  margin: 0 2rem;
+  text-decoration: none;
+  transition: 0.2s color linear;
+}
+
+.header .navbar .nav-item.active {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.header .navbar a:hover {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.header #menu-bar {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 2.3rem;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  display: none;
+  color: var(--primary-color);
+}
+
+/* Header Section Ends Here */
+
+/* Home Section Begins Here */
+
+.home {
+  height: 50rem;
+  position: relative;
+  background-image: url('../images/airplane.jpg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  z-index: -2;
+}
+
+.home::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  z-index: -1;
+}
+
+.home .home-content {
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  z-index: 0;
+}
+
+.home .home-content h3 {
+  font-size: 3rem;
+  font-weight: bolder;
+  margin: 1rem;
+  letter-spacing: 0.1rem;
+  color: darkblue;
+  text-shadow: 0 0.1rem 0.1rem rgba(0, 0, 0, 0.9);
+}
+
+.home .home-content p {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: orange;
+  text-shadow: 0 0.1rem 0 orange;
+}
+
+/* Home Section Ends Here */
+
+/* About Section Begins Here */
+
+.about {
+  min-height: 80vh;
+  text-align: center;
+  width: 100vw;
+  position: relative;
+  overflow: hidden;
+  background: #fff;
+  margin-top: 5rem;
+  background-color: #a7ccfc;
+}
+
+.about .about-heading {
+  text-align: center;
+}
+
+.about .about-heading span {
+  font-size: 3rem;
+  background: rgba(0, 0, 0, 1);
+  color: #a7ccfc;
+  border-radius: 0.5rem;
+  padding: 0.2rem 0.5rem;
+}
+
+.about .about-heading span.space {
+  background: none;
+}
+
+.about .row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 4rem 4rem;
+}
+
+.about .row .about-image {
+  width: 50%;
+  height: 50vh;
+}
+
+.about .row .about-image img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+.about .row .about-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: right;
+  padding-right: 1rem;
+  width: 50%;
+  height: 50vh;
+}
+
+.about .row .about-content h2 {
+  font-size: 3rem;
+  letter-spacing: 0.5rem;
+}
+
+.about .row .about-content p {
+  font-size: 1.5rem;
+  padding: 1rem 0;
+}
+
+/* About Section Ends Here */
+
+/* Service Section Begins Here */
+
+.service {
+  min-height: 80vh;
+  text-align: center;
+  width: 100vw;
+  position: relative;
+  background: #fff;
+  overflow: hidden;
+  margin-top: 5rem;
+  background-color: #a7ccfc;
+}
+
+.service .service-heading {
+  text-align: center;
+}
+
+.service .service-heading span {
+  font-size: 3rem;
+  background: rgba(0, 0, 0, 1);
+  color: #a7ccfc;
+  border-radius: 0.5rem;
+  padding: 0.2rem 0.5rem;
+  font-weight: bolder;
+}
+
+.service .service-heading span.space {
+  background: none;
+}
+
+.service .card-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 3rem;
+}
+
+.service .card-container .card {
+  width: 20rem;
+  margin: 2rem;
+  background: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.1rem 0.8rem rgba(0, 0, 0, 0.3);
+}
+
+.service .card-container .card img {
+  height: 10rem;
+  width: 100%;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+.service .card-container .card .content {
+  text-align: center;
+  padding-bottom: 2rem;
+}
+
+.service .card-container .card .content .title {
+  font-size: 2.5rem;
+}
+
+.service .card-container .card .content p {
+  font-size: 1.1rem;
+}
+
+.service .card-container .card .content .btn {
+  font-size: 1.2rem;
+  margin-top: 1.2rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 1rem;
+  border: none;
+  background-color: black;
+  color: white;
+}
+
+/* Service Section Ends Here */
+
+/* Result Section Begins Here */
+
+.result {
+  position: relative;
+  min-height: 90vh;
+  margin-top: 5rem;
+  background-image: linear-gradient(to bottom, #89f7fe, #66a6ff);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.result .result-container {
+  text-align: center;
+  width: 90%;
+  background-color: transparent;
+}
+
+.result .result-container .list-group-item {
+  background-image: var(--secondary-color);
+}
+
+.result .home-btn {
+  padding: 0.5rem 2rem;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+/* Result Section Ends Here */
+
+/* Predict Section Begins Here */
+
+.predict {
+  margin-top: 5rem;
+  background: var(--secondary-color);
+  position: relative;
+  min-height: 100vh;
+}
+
+.predict .container .title {
+  text-align: center;
+  padding-top: 1rem;
+}
+
+.form .button-container {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.form .button-container .pred-btn {
+  width: 75%;
+  border-radius: 1rem;
+  background-color: black;
+  color: white;
+  text-align: center;
+  margin-bottom: 1rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  cursor: pointer;
+}
+
+.form .button-container .pred-btn:hover {
+  background-color: #222;
+}
+
+.form-group {
+  position: relative;
+  margin: 1rem 0;
+}
+.form-group span {
+  color: red;
+  display: none;
+}
+.form-group i {
+  position: absolute;
+  right: 8px;
+  top: 42px;
+  visibility: hidden;
+}
+
+.form-group.success input {
+  border-color: #2ecc71;
+  border-width: 3px;
+}
+
+.form-group.success select {
+  border-color: #2ecc71;
+  border-width: 3px;
+}
+
+.form-group.error input {
+  border-color: #e74c3c;
+  border-width: 3px;
+}
+
+.form-group.error span {
+  font-weight: 800;
+  color: #e74c3c;
+}
+
+/* Predict Section Ends Here */
+
+/* Footer Section Begins Here */
+
+.footer {
+  min-height: 25vh;
+  width: 100%;
+  background: black;
+  color: #fff;
+  text-align: center;
+  padding-top: 2rem;
+  border: 1px solid black;
+}
+
+.footer h3 {
+  font-size: 2rem;
+  letter-spacing: 0.5rem;
+}
+
+.footer p {
+  font-size: 1rem;
+  padding: 0.5rem;
+}
+
+/* Footer Section Ends Here */
+
+.error-section {
+  margin-top: 5rem;
+  height: 65vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.error-section h1,
+.error-section h3,
+.error-section p {
+  margin: 5px 0;
+}
+
+/* Media Queries */
+
+@media (max-width: 1300px) {
+  .home .home-content {
+    bottom: -10%;
+  }
+}
+
+@media (max-width: 768px) {
+  .header .logo {
+    position: absolute;
+    top: 0.8rem;
+    left: 2rem;
+    line-height: 1.5;
+  }
+
+  .header #menu-bar {
+    display: initial;
+    position: absolute;
+    top: 1.2rem;
+    right: 2rem;
+    padding: 0.3rem 0.8rem;
+  }
+
+  .header .navbar {
+    position: absolute;
+    top: 5rem;
+    left: 0;
+    width: 100%;
+    background: #111;
+    border-top: 0.1rem solid rgba(255, 255, 255, 0.2);
+    padding: 0.8rem 2rem;
+    display: flex;
+    flex-direction: column;
+    display: none;
+  }
+
+  .header .navbar.active {
+    display: initial;
+  }
+
+  .header .navbar a {
+    display: block;
+    width: 100%;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    padding-right: 2rem;
+    margin: 1rem 0;
+    background: #222;
+    font-size: 1.5rem;
+    text-align: right;
+  }
+
+  .home .home-content {
+    bottom: 0%;
+    width: 100%;
+  }
+
+  .about .row {
+    flex-direction: column;
+    padding: 4rem 0 2rem;
+  }
+
+  .about .row .about-image {
+    height: 40%;
+  }
+
+  .about .row .about-content {
+    margin-top: 1rem;
+    width: 70%;
+    text-align: center;
+  }
+
+  .about .about-heading span {
+    font-size: 2rem;
+  }
+
+  .service .service-heading span {
+    font-size: 2rem;
+  }
+
+  .form .button-container .pred-btn {
+    width: 100%;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 785px) {
+  .home .home-content {
+    bottom: -5%;
+  }
+}
+
+@media (min-width: 361px) and (max-width: 480px) {
+  .home .home-content {
+    bottom: -10%;
+  }
+
+  .home .home-content h3 {
+    font-size: 2rem;
+  }
+
+  .home .home-content p {
+    font-size: 1.5rem;
+  }
+
+  .about .about-heading span,
+  .service .service-heading span {
+    font-size: 2rem;
+    padding: 0.5rem 0.2rem;
+  }
+}
+
+@media (min-width: 300px) and (max-width: 360px) {
+  .home .home-content {
+    bottom: -10%;
+  }
+  .home .home-content h3 {
+    font-size: 2rem;
+  }
+  .home .home-content p {
+    font-size: 1.3rem;
+  }
+  .about .row .about-image img {
+    width: 90%;
+    object-fit: cover;
+  }
+  .service {
+    margin-top: -0.5rem;
+  }
+  .about .about-heading span,
+  .service .service-heading span {
+    font-size: 2rem;
+    padding: 0.5rem 0.1rem;
+  }
+}
+
+@media (min-width: 0px) and (max-width: 299px) {
+  .home .home-content {
+    bottom: -12%;
+  }
+  .home .home-content h3 {
+    font-size: 2rem;
+  }
+  .about .about-heading span,
+  .service .service-heading span {
+    font-size: 2rem;
+    padding: 0.5rem 0;
+  }
+}

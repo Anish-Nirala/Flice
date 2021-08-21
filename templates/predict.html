@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+{% block title %}
+Flice - Predict
+{% endblock %}
+{% block body %}
+<section class="predict" id="predict">
+    <div class="container">
+        <h1 class="title">Flight Price Prediction Model</h1>
+        <form action="/predict/price" method="POST" onsubmit="return validation()" class="form" id="form">
+            <div class="form-group">
+                <label for="airline" class="form-label h6">Airline</label>
+                <select class="form-select" aria-label="Default select example" id="airline" name="Airline">
+                    <option selected value="IndiGo">IndiGo</option>
+                    <option value="Air India">Air India</option>
+                    <option value="Jet Airways">Jet Airways</option>
+                    <option value="SpiceJet">SpiceJet</option>
+                    <option value="Multiple carriers">Multiple carriers</option>
+                    <option value="GoAir">GoAir</option>
+                    <option value="Vistara">Vistara</option>
+                    <option value="Air Asia">Air Asia</option>
+                    <option value="Vistara Premium economy">Vistara Premium economy</option>
+                    <option value="Jet Airways Business">Jet Airways Business</option>
+                    <option value="Multiple carriers Premium economy">Multiple carriers Premium economy</option>
+                    <option value="Trujet">Trujet</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="date_of_journey" class="form-label h6">Date Of Journey</label>
+                <input type="text" class="form-control" id="date_of_journey" name="Date_of_Journey"
+                    placeholder="Date of journey should be in form DD/MM/YYYY">
+                <span>Error Message</span>
+            </div>
+            <div class="form-group">
+                <label for="source" class="form-label h6">Source</label>
+                <input type="text" class="form-control" id="source" name="Source"
+                    placeholder="Enter Source Airport Code">
+                <span>Error Message</span>
+            </div>
+            <div class="form-group">
+                <label for="destination" class="form-label h6">Destination</label>
+                <input type="text" class="form-control" id="destination" name="Destination"
+                    placeholder="Enter Destination Airport Code">
+                <span>Error Message</span>
+            </div>
+            <div class="form-group">
+                <label for="stops" class="form-label h6">Stops</label>
+                <select class="form-select" aria-label="Default select example" id="stops" name="Total_Stops">
+                    <option selected value="non-stop">Non-stop</option>
+                    <option value="1 stop">1 stop</option>
+                    <option value="2 stops">2 stops</option>
+                    <option value="3 stops">3 stops</option>
+                    <option value="4 stops">4 stops</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="route" class="form-label h6">Route</label>
+                <input type="text" class="form-control" id="route"
+                    placeholder="Route should be in form like this DEL->LKO->BOM->COK" name="Route">
+                <span>Error Message</span>
+            </div>
+            <div class="form-group">
+                <label for="dept_time" class="form-label h6">Departure Time</label>
+                <input type="text" class="form-control" id="dept_time" name="Dep_Time"
+                    placeholder="Departure time should be in form HH:MM">
+                <span>Error Message</span>
+            </div>
+            <div class="form-group">
+                <label for="arv_time" class="form-label h6">Arrival Time</label>
+                <input type="text" class="form-control" id="arv_time" name="Arr_Time"
+                    placeholder="Arrival time should be in form HH:MM">
+                <span>Error Message</span>
+            </div>
+            <div class="button-container">
+                <button type="submit" class="pred-btn" id="pred-btn">Predict</button>
+            </div>
+        </form>
+    </div>
+</section>
+{% endblock %}
